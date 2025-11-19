@@ -34,7 +34,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; {{ date('Y') }} Your Name. All Rights Reserved.</p>
+            <p>&copy; {{ date('Y') }} Jelo Rebaya. All Rights Reserved.</p>
         </div>
     </footer>
 </body>

@@ -1,27 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
 Route::get('/', function () {
     return view('index');
 });
 
-Route::get('blog', function () {
-    return view('blog');
-});
+Route::get('/register', [AuthController::class, 'showRegister'])->name('register.form');
+Route::post('/register', [AuthController::class, 'register'])->name('register');
 
-Route::get('contact', function () {
-    return view('contact');
-});
-
-Route::get('about', function () {
-    return view('about');
-});
-
-Route::get('portfolio', function () {
-    return view('portfolio');
-});
-
-Route::get('welcome', function () {
-    return view('welcome');
+Route::get('/login', [AuthController::class, 'showlogin'])->name('login.form');
+Route::post('/login', [AuthController::class, 'performlogin'])->name('login');
+Route::get('/logout', function (){
 });
