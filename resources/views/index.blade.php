@@ -9,6 +9,23 @@
 </head>
 
 <body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="{{ asset('images/logo.png')}}" class="nav-logo" alt="logo">
+                <h2>Portfolio</h2>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#home">About</a></li>
+                <li><a href="#home">Projects</a></li>
+                <li><a href="#home">Contact</a></li>
+            </ul>
+        </div>   
+    </nav>
+
     <header class="hero">
         <div class="container hero-container">
             <div class="intro">
@@ -18,7 +35,7 @@
             </div>
 
             <div class="image-placeholder">
-                <img src="https://i.pinimg.com/474x/16/57/b5/1657b55d2e304e0c5e422216dc831dc0.jpg" alt="Profile Picture">
+                <img src="{{ asset('images/profile.jpg')}}" alt="Profile Picture">
             </div>
         </div>
     </header>
