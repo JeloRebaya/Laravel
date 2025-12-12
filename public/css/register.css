@@ -9,27 +9,33 @@
 }
 
 /* Page wrapper to center the form */
-.register-page-wrapper {
+.register-page {
     display: flex;
     justify-content: center; /* horizontal center */
     align-items: center;     /* vertical center */
     min-height: 100vh;
-    background-color: #121212;
-    padding: 20px; /* optional padding for small screens */
+    background: linear-gradient(135deg, #1a1a1a, #121212);
+    padding: 20px;
 }
 
 /* Form container */
-form {
+.register-form {
     background-color: #1e1e1e;
     padding: 40px 30px;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     width: 100%;
     max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register-form:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
 }
 
 /* Form heading */
-form h2 {
+.register-form h2 {
     text-align: center;
     margin-bottom: 25px;
     color: #00bfff;
@@ -37,7 +43,7 @@ form h2 {
 }
 
 /* Labels */
-form label {
+.register-form label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
@@ -45,9 +51,9 @@ form label {
 }
 
 /* Inputs */
-form input[type="text"],
-form input[type="email"],
-form input[type="password"] {
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"] {
     width: 100%;
     padding: 12px 15px;
     margin-bottom: 20px;
@@ -59,16 +65,15 @@ form input[type="password"] {
     transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Input focus effect */
-form input[type="text"]:focus,
-form input[type="email"]:focus,
-form input[type="password"]:focus {
+.register-form input[type="text"]:focus,
+.register-form input[type="email"]:focus,
+.register-form input[type="password"]:focus {
     border-color: #00bfff;
     box-shadow: 0 0 5px rgba(0, 191, 255, 0.5);
 }
 
 /* Submit button */
-form input[type="submit"] {
+.register-btn {
     width: 100%;
     padding: 12px;
     background-color: #00bfff;
@@ -81,19 +86,45 @@ form input[type="submit"] {
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
-/* Submit button hover */
-form input[type="submit"]:hover {
+.register-btn:hover {
     background-color: #0091d6;
     transform: translateY(-2px);
 }
 
+/* Error messages */
+.error {
+    display: block;
+    color: #ff4d4f;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+/* Links below form */
+.register-links {
+    text-align: center;
+    margin-top: 15px;
+    color: #ccc;
+}
+
+.register-links a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.register-links a:hover {
+    color: #0091d6;
+}
+
 /* Responsive adjustments */
 @media (max-width: 480px) {
-    form {
+    .register-form {
         padding: 30px 20px;
     }
 
-    form h2 {
+    .register-form h2 {
         font-size: 1.5rem;
     }
 }
