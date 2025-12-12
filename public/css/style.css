@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: #eee;
     background-color: #121212;
@@ -21,17 +21,19 @@ body {
 .btn {
     display: inline-block;
     padding: 12px 28px;
-    background-color: #00bfff;
-    color: #fff;
+    background: var(--primary);
+    color: #white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-size: 1rem;
     font-weight: bold;
-    transition: background 0.3s ease, transform 0.3s ease;
+    transition: 0.25s ease;
 }
 
 .btn:hover {
-    background-color: #0091d6;
+    background: #0084cc;
     transform: translateY(-3px);
+    box-shadow: 0 4px 20px rgba(0,168,255,0.4);
 }
 
 .hero {
@@ -60,11 +62,17 @@ body {
 
 .hero h1 {
     font-size: 3rem;
+    font-weight: 700;
     margin-bottom: 10px;
 }
 
+:root{
+    --primary: #00bfff;
+    --text-light: #e5e5e5;
+}
+
 .hero h1 span {
-    color: #00bfff;
+    color: var(--primary);
 }
 
 .hero p {
@@ -131,6 +139,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 50px;
     padding: 100px 0;
     position: relative;
     z-index: 1;
@@ -150,11 +159,12 @@ body {
 }
 
 .hero .image-placeholder img {
-    width: 250px;
-    height: 250px;
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
 }
 
 @media (max-width: 768px) {
@@ -172,8 +182,9 @@ body {
 /*Navbar css*/
 .navbar {
     width: 100%;
-    background-color: #111;
-    padding: 12px 0;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    padding: 15px 50px;
     position: fixed;
     top: 0;
     left: 0;
@@ -223,4 +234,15 @@ body {
     color: #00aaff;
 }
 
+.fade-in{
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards ease-in-out;
+}
 
+@keyframes fadeIn{
+    to{
+        opacity: 1;
+        transform: translateY();
+    }
+}

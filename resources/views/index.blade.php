@@ -29,7 +29,7 @@
     <header class="hero">
         <div class="container hero-container">
             <div class="intro">
-                <h1>Hello, I'm <span>Jelo Rebaya</span></h1>
+                <h1 class="fade-in">Hello, I'm <span>Jelo Rebaya</span></h1>
                 <p>I'm a 3rd YR BSCS Student</p>
                 <a href="#projects" class="btn">View My Work</a>
             </div>
