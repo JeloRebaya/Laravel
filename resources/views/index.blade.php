@@ -14,14 +14,13 @@
         <div class="nav-container">
             <div class="logo">
                 <img src="{{ asset('images/logo.png')}}" class="nav-logo" alt="logo">
-                <h2>Portfolio</h2>
             </div>
 
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#home">About</a></li>
-                <li><a href="#home">Projects</a></li>
-                <li><a href="#home">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>   
     </nav>
@@ -32,6 +31,7 @@
                 <h1 class="fade-in">Hello, I'm <span>Jelo Rebaya</span></h1>
                 <p>I'm a 3rd YR BSCS Student</p>
                 <a href="#projects" class="btn">View My Work</a>
+                <a href="{{ route('admin.dashboard') }}" class="btn admin-btn">Go to Admin Panel</a>
             </div>
 
             <div class="image-placeholder">

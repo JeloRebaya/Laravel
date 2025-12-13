@@ -4,25 +4,25 @@
     box-sizing: border-box;
 }
 
-body {
+body{
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: #eee;
     background-color: #121212;
 }
 
-.container {
+.container{
     width: 90%;
     max-width: 1100px;
     margin: 0 auto;
     padding: 20px 0;
 }
 
-.btn {
+.btn{
     display: inline-block;
     padding: 12px 28px;
     background: var(--primary);
-    color: #white;
+    color: white;
     text-decoration: none;
     border-radius: 8px;
     font-size: 1rem;
@@ -30,13 +30,13 @@ body {
     transition: 0.25s ease;
 }
 
-.btn:hover {
+.btn:hover{
     background: #0084cc;
     transform: translateY(-3px);
     box-shadow: 0 4px 20px rgba(0,168,255,0.4);
 }
 
-.hero {
+.hero{
     background-color: #a09e9e;
     color: #fff;
     text-align: center;
@@ -44,7 +44,7 @@ body {
     position: relative;
 }
 
-.hero::after {
+.hero::after{
     content: "";
     position: absolute;
     top: 0;
@@ -55,12 +55,12 @@ body {
     z-index: 0;
 }
 
-.hero .container {
+.hero .container{
     position: relative;
     z-index: 1;
 }
 
-.hero h1 {
+.hero h1{
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 10px;
@@ -71,16 +71,16 @@ body {
     --text-light: #e5e5e5;
 }
 
-.hero h1 span {
+.hero h1 span{
     color: var(--primary);
 }
 
-.hero p {
+.hero p{
     font-size: 1.2rem;
     margin-bottom: 20px;
 }
 
-.section h2 {
+.section h2{
     text-align: center;
     font-size: 2rem;
     margin-bottom: 30px;
@@ -88,7 +88,7 @@ body {
     position: relative;
 }
 
-.section h2::after {
+.section h2::after{
     content: '';
     display: block;
     width: 60px;
@@ -98,20 +98,20 @@ body {
     border-radius: 2px;
 }
 
-#about p {
+#about p{
     max-width: 700px;
     margin: 0 auto;
     text-align: center;
     color: #ccc;
 }
 
-#contact p {
+#contact p{
     text-align: center;
     font-size: 1.1rem;
     color: #ccc;
 }
 
-.footer {
+.footer{
     background-color: #111;
     color: #888;
     text-align: center;
@@ -121,21 +121,21 @@ body {
 }
 
 /*response*/
-@media (max-width: 768px) {
-    .hero h1 {
+@media (max-width: 768px){
+    .hero h1{
         font-size: 2.2rem;
     }
 
-    .hero p {
+    .hero p{
         font-size: 1rem;
     }
 
-    .section h2 {
+    .section h2{
         font-size: 1.5rem;
     }
 }
 
-.hero .hero-container {
+.hero .hero-container{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -145,20 +145,20 @@ body {
     z-index: 1;
 }
 
-.hero .intro {
+.hero .intro{
     flex: 1;
     padding-right: 40px;
     text-align: left;
 }
 
-.hero .image-placeholder {
+.hero .image-placeholder{
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.hero .image-placeholder img {
+.hero .image-placeholder img{
     width: 260px;
     height: 260px;
     object-fit: cover;
@@ -167,20 +167,20 @@ body {
     box-shadow: 0 8px 30px rgba(0,0,0,0.25);
 }
 
-@media (max-width: 768px) {
-    .hero .hero-container {
+@media (max-width: 768px){
+    .hero .hero-container{
         flex-direction: column;
         text-align: center;
     }
 
-    .hero .intro {
+    .hero .intro{
         padding-right: 0;
         margin-bottom: 30px;
     }
 }
 
 /*Navbar css*/
-.navbar {
+.navbar{
     width: 100%;
     background: rgba(0,0,0,0.5);
     backdrop-filter: blur(10px);
@@ -191,7 +191,7 @@ body {
     z-index: 1000;
 }
 
-.nav-container {
+.nav-container{
     width: 90%;
     margin: auto;
     display: flex;
@@ -199,38 +199,38 @@ body {
     align-items: center;
 }
 
-.brand {
+.brand{
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.brand h2 {
+.brand h2{
     color: #00aaff;
     font-size: 1.3rem;
 }
 
-.nav-logo {
-    height: 40px;
-    width: 40px;
+.nav-logo{
+    height: 80px;
+    width: 80px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.nav-links {
+.nav-links{
     list-style: none;
     display: flex;
     gap: 30px;
 }
 
-.nav-links a {
+.nav-links a{
     color: #ccc;
     font-size: 1.05rem;
     text-decoration: none;
     transition: 0.3s;
 }
 
-.nav-links a:hover {
+.nav-links a:hover{
     color: #00aaff;
 }
 

@@ -9,44 +9,69 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
-    function showRegister(){
+    // Show the registration form
+    public function showRegister()
+    {
         return view('authentication.register');
     }
 
-    function showLogin(){
+    // Show the login form
+    public function showLogin()
+    {
         return view('authentication.login');
     }
 
-    function register(Request $request){
+    // Handle registration
+    public function register(Request $request)
+    {
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6|confirmed'
         ]);
-        
+
         User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => Hash::make($request->password)
+            'password' => Hash::make($request->password) // hash password
         ]);
 
-        return redirect()->route('login.form')->with('success','Registration Successful');
+        return redirect()->route('login.form')->with('success', 'Registration Successful');
     }
 
-    function performlogin(Request $request){
+    // Handle login
+    public function performlogin(Request $request)
+    {
         $request->validate([
             'email' => 'required|email',
             'password' => 'required'
         ]);
 
-        if (Auth::attempt($request->only(
-            'email',
-            'password'))){
-                return redirect('/');
-            }
+        $credentials = $request->only('email', 'password');
 
+        if (Auth::attempt($credentials)) {
+            // Regenerate session to prevent session fixation
+            $request->session()->regenerate();
+
+            // Redirect to homepage after login
+            return redirect('/')->with('success', 'Login successful!');
+        }
+
+        // Login failed, redirect back with error
         return back()->withErrors([
-            'email'=> 'Invalid Credentials'
-        ]);
+            'email' => 'Invalid Credentials'
+        ])->withInput();
+    }
+
+    // Handle logout
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        // Invalidate the session
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/login')->with('success', 'You have logged out successfully.');
     }
 }
