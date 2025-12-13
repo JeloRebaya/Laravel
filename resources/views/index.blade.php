@@ -35,7 +35,7 @@
             </div>
 
             <div class="image-placeholder">
-                <img src="{{ asset('images/profile.jpg')}}" alt="Profile Picture">
+                <img src="{{ asset('images/photo.jpg')}}" alt="Profile Picture">
             </div>
         </div>
     </header>
