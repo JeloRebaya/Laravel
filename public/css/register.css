@@ -1,0 +1,130 @@
+/* ===== register.css ===== */
+
+/* Reset and font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Page wrapper to center the form */
+.register-page {
+    display: flex;
+    justify-content: center; /* horizontal center */
+    align-items: center;     /* vertical center */
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a1a1a, #121212);
+    padding: 20px;
+}
+
+/* Form container */
+.register-form {
+    background-color: #1e1e1e;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register-form:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Form heading */
+.register-form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #00bfff;
+    font-size: 1.8rem;
+}
+
+/* Labels */
+.register-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #eee;
+}
+
+/* Inputs */
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #1e1e1e;
+    color: #eee;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register-form input[type="text"]:focus,
+.register-form input[type="email"]:focus,
+.register-form input[type="password"]:focus {
+    border-color: #00bfff;
+    box-shadow: 0 0 5px rgba(0, 191, 255, 0.5);
+}
+
+/* Submit button */
+.register-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #00bfff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.register-btn:hover {
+    background-color: #0091d6;
+    transform: translateY(-2px);
+}
+
+/* Error messages */
+.error {
+    display: block;
+    color: #ff4d4f;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+/* Links below form */
+.register-links {
+    text-align: center;
+    margin-top: 15px;
+    color: #ccc;
+}
+
+.register-links a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.register-links a:hover {
+    color: #0091d6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .register-form {
+        padding: 30px 20px;
+    }
+
+    .register-form h2 {
+        font-size: 1.5rem;
+    }
+}

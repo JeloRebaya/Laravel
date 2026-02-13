@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary: #00bfff;
+    --text-light: #e5e5e5;
+    --hero-dark: #0b2338;
+    --hero-mid: #123a5a;
+    --hero-light: #1b4f7a;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #eee;
+    background-color: #121212;
+}
+
+.container{
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Buttons */
+.btn{
+    display: inline-block;
+    padding: 12px 28px;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.25s ease;
+}
+
+.btn:hover{
+    background: #0084cc;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 20px rgba(0,168,255,0.4);
+}
+
+/* Navbar */
+.navbar{
+    width: 100%;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(10px);
+    padding: 15px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-container{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand h2{
+    color: #00aaff;
+    font-size: 1.3rem;
+}
+
+.nav-logo{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a{
+    color: #ccc;
+    font-size: 1.05rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover{
+    color: #00aaff;
+}
+
+/* Hero Section */
+.hero{
+    background: radial-gradient(
+        circle at center,
+        var(--hero-light) 0%,
+        var(--hero-mid) 45%,
+        var(--hero-dark) 100%
+    );
+    color: #fff;
+    padding: 160px 20px 120px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.35);
+    z-index: 0;
+}
+
+.hero .container{
+    position: relative;
+    z-index: 1;
+}
+
+.hero .hero-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero .intro{
+    flex: 1;
+    padding-right: 40px;
+    text-align: left;
+}
+
+.hero h1{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero h1 span{
+    color: var(--primary);
+}
+
+.hero p{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--text-light);
+}
+
+/* Hero Image */
+.hero .image-placeholder{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .image-placeholder img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+}
+
+/* Sections */
+.section h2{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: var(--primary);
+    position: relative;
+}
+
+.section h2::after{
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--primary);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+#about p{
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    color: #ccc;
+}
+
+#contact p{
+    text-align: center;
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+/* Footer */
+.footer{
+    background-color: #111;
+    color: #888;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+.fade-in{
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards ease-in-out;
+}
+
+@keyframes fadeIn{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px){
+    .hero .hero-container{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero .intro{
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .hero h1{
+        font-size: 2.2rem;
+    }
+
+    .hero p{
+        font-size: 1rem;
+    }
+
+    .section h2{
+        font-size: 1.5rem;
+    }
+
+    .hero .image-placeholder img{
+        width: 280px;
+        height: 280px;
+    }
+}
